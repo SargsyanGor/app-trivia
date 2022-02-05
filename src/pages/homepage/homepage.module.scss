@@ -1,0 +1,44 @@
+.gs_homepage {
+  h1.gs_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 150%;
+    color: #3A7859;
+    margin: 134px 0 146px;
+  }
+  p.gs_pick_category {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 150%;
+    color: #354153;
+    margin-bottom: 36px;
+  }
+  .gs_select_wrapper {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    .gs_react_select {
+
+    }
+    .gs_start_btn {
+      margin-top: 99px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 16px 20px 18px;
+      border-radius: 18px;
+      min-width: 155px;
+      background-color: #3A7859;
+      color: #ffffff;
+      transition: background 700ms;
+      &[disabled] {
+        background: #F6F7F8;
+        color: #C4C4C4;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

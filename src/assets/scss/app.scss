@@ -1,0 +1,12 @@
+@import "abstracts/colors";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+// Base
+@import "base/typography";
+@import "base/reset";
+@import "base/base";
+
+// Vendors
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
