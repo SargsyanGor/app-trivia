@@ -1,18 +1,11 @@
+@import "src/assets/scss/abstracts/colors";
 .gs_homepage {
-  h1.gs_title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 150%;
-    color: #3A7859;
-    margin: 134px 0 146px;
-  }
   p.gs_pick_category {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 150%;
-    color: #354153;
+    color: $mainDark;
     margin-bottom: 36px;
   }
   .gs_select_wrapper {
@@ -28,7 +21,7 @@
       padding: 16px 20px 18px;
       border-radius: 18px;
       min-width: 155px;
-      background-color: #3A7859;
+      background-color: $mainGreen;
       color: #ffffff;
       transition: background 700ms;
       &[disabled] {

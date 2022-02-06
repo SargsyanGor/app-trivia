@@ -2,3 +2,13 @@ body {
   background-color: $mainBg;
   font-family: 'Barlow', sans-serif!important;
 }
+
+// Global usage
+.gs_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 150%;
+  color: $mainGreen;
+  margin: 134px 0 146px;
+}

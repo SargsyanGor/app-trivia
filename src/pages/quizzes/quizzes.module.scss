@@ -1,0 +1,55 @@
+@import "src/assets/scss/abstracts/colors";
+.gs_quizzes {
+  span.difficulty_level {
+    border-radius: 12px 0px 12px 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    min-width: 100px;
+    height: 37px;
+    padding: 4px 8px 6px;
+    cursor: default;
+    &.gs_green{
+      background: $levelGreen;
+    }
+    &.gs_yellow{
+      background: $levelYellow;
+    }
+    &.gs_orange{
+      background: $levelOrange;
+    }
+  }
+  p.gs_question {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 150%;
+    color: $mainDark;
+    margin: 87px 0 75px;
+    max-width: 1080px;
+  }
+  div.gs_answers_block {
+    button {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      margin-right: 16px;
+      color: $mainDark;
+      border: 1px solid $lightGreen;
+      border-radius: 13px;
+      min-width: 210px;
+      height: 40px;
+      transition: all 600ms;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      &:hover{
+        background-color: lighten(#92a69c, 25%);
+        border-color: lighten(#92a69c, 25%);
+        color: $mainGreen;
+      }
+    }
+  }
+}

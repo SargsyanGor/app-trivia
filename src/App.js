@@ -18,7 +18,10 @@ function App() {
         path="/"
         element={<Homepage dataReceivedSuccess={setDataCallback} />}
       />
-      <Route path="quizzes" element={<Quizzes />} />
+      <Route
+        path="quizzes"
+        element={<Quizzes questionsData={questionsList} />}
+      />
     </Routes>
   );
 }

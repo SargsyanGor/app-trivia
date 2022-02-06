@@ -81,7 +81,7 @@ const Homepage = (props) => {
 
   return (
     <main className={styles.gs_homepage}>
-      <h1 className={styles.gs_title + ` tw__text-center`}>Trivia App</h1>
+      <h1 className="gs_title tw__text-center">Trivia App</h1>
       <p className={styles.gs_pick_category + ` tw__text-center`}>
         Pick a Category
       </p>
