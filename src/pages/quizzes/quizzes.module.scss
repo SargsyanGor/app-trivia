@@ -1,5 +1,7 @@
 @import "src/assets/scss/abstracts/colors";
+@import "src/assets/scss/base/base";
 .gs_quizzes {
+  @extend .gs_container;
   span.difficulty_level {
     border-radius: 12px 0px 12px 12px;
     font-style: normal;
@@ -23,26 +25,29 @@
   .gs_question {
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
     line-height: 150%;
     color: $mainDark;
+    font-size: 18px;
     margin: 87px 0 75px;
-    max-width: 1080px;
+    @screen md {
+      font-size: 24px;
+    }
+    @screen lg {
+      font-size: 30px;
+    }
   }
   div.gs_answers_block {
     button {
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
       line-height: 22px;
-      margin-right: 16px;
       color: $mainDark;
       border: 1px solid $lightGreen;
       border-radius: 13px;
-      min-width: 210px;
+      margin-bottom: 15px;
       min-height: 40px;
       padding: 10px;
-      max-width: 20%;
+      font-size: 14px;
       transition: all 600ms;
       &:last-of-type{
         margin-right: 0;
@@ -51,6 +56,16 @@
         background-color: lighten(#92a69c, 25%);
         border-color: lighten(#92a69c, 25%);
         color: $mainGreen;
+      }
+      @screen lg {
+        min-width: 210px;
+        font-size: 18px;
+      }
+      @screen md {
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-right: 16px;
+        max-width: 20%;
       }
     }
   }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./quizzes.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Quizzes = (props) => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -7,8 +8,19 @@ const Quizzes = (props) => {
   const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState([]);
   const questionsList = props.questionsData.results;
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (questionsList === undefined) {
+      navigate("/");
+      return;
+    }
+    if (questionIndex === questionsList.length) {
+      navigate(
+        /quizz-completed/ + correctAnswersCount + "/" + questionsList.length
+      );
+      return;
+    }
     const result = getCurrentQuestionData(questionIndex);
     setCurrentQuestion(result);
     //eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,7 +43,7 @@ const Quizzes = (props) => {
     React.createElement("p", {
       dangerouslySetInnerHTML: { __html: rawHTML },
     });
-  // Sub-render
+  // Sub-render functions
   const renderDifficultyBadge = (level) => {
     switch (level) {
       case "easy":
@@ -109,7 +121,7 @@ const Quizzes = (props) => {
                 answerHandle(answer === correctAnswer);
               }}
             >
-              {answer}
+              {renderHTML(answer)}
             </button>
           );
         });
@@ -136,7 +148,10 @@ const Quizzes = (props) => {
             </div>
           </div>
           <div
-            className={styles.gs_answers_block + ` tw__flex tw__justify-center`}
+            className={
+              styles.gs_answers_block +
+              ` tw__flex tw__justify-center tw__flex-col md:tw__flex-row`
+            }
           >
             {renderAnswersBlock(d.type, d.correct_answer, d.incorrect_answers)}
           </div>

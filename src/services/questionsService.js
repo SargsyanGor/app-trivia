@@ -5,6 +5,6 @@ export const getQuestions = async (categoryId) => {
     const response = await fetch(apiUrl);
     return await response.json();
   } catch (error) {
-    return [];
+    return error;
   }
 };

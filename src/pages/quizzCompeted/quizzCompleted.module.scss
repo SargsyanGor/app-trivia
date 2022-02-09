@@ -1,0 +1,23 @@
+@import "src/assets/scss/abstracts/colors";
+@import "src/assets/scss/base/base";
+main.gs_quizz_completed {
+  @extend .gs_container;
+  p.gs_score_board {
+    color: $mainDark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  button.gs_back_home {
+    min-width: 149px;
+    background-color: $mainGreen;
+    border-radius: 18px;
+    padding: 14px 20px 18px;
+    color: #ffffff;
+    margin-top: 68px;
+    transition: background-color 500ms;
+    &:hover {
+      background-color: lighten($mainGreen, 10%);
+    }
+  }
+}

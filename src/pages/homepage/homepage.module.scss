@@ -1,5 +1,7 @@
 @import "src/assets/scss/abstracts/colors";
+@import "src/assets/scss/base/base";
 .gs_homepage {
+  @extend .gs_container;
   p.gs_pick_category {
     font-style: normal;
     font-weight: bold;
