@@ -20,7 +20,7 @@
       background: $levelOrange;
     }
   }
-  p.gs_question {
+  .gs_question {
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -40,7 +40,9 @@
       border: 1px solid $lightGreen;
       border-radius: 13px;
       min-width: 210px;
-      height: 40px;
+      min-height: 40px;
+      padding: 10px;
+      max-width: 20%;
       transition: all 600ms;
       &:last-of-type{
         margin-right: 0;
